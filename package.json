@@ -1,0 +1,13 @@
+{
+  "name": "iris-ml-dashboard",
+  "private": true,
+  "scripts": {
+    "predev": "jupyter nbconvert --to notebook --execute --inplace notebooks/train_iris.ipynb",
+    "dev": "concurrently --names API,UI --prefix-colors cyan,magenta \"uvicorn backend.main:app --port 8000\" \"npm run dev --prefix frontend\"",
+    "install:all": "pip install -r ml/requirements.txt --user && pip install -r backend/requirements.txt --user && npm install --prefix frontend",
+    "export": "jupyter nbconvert --to notebook --execute --inplace notebooks/train_iris.ipynb"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
