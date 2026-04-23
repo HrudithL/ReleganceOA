@@ -2,7 +2,7 @@
 
 Trains a random forest and xgboost classifier on the iris dataset and lets you compare them side by side in a react dashboard. Shows accuracy, confusion matrices, feature importance, and per-sample predictions.
 
-## install
+## Install
 
 ```sh
 pip install -r ml/requirements.txt --user
@@ -11,7 +11,7 @@ npm install
 npm install --prefix frontend
 ```
 
-## run
+## Run
 
 ```sh
 npm run dev
